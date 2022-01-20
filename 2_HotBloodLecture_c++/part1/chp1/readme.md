@@ -129,7 +129,3 @@
         namespace ABC = AA::BB::CC;
         ABC::val;
         ```
-
-        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
-
-        https://SY-jo@github.com/SY-jo/Study_SW.git
