@@ -1,0 +1,22 @@
+각 챕터에 해당하는 코드를 아래 커밋 히스토리에서 해쉬코드를 참조해서 다운받음
+https://github.com/navilera/Navilos/commits/master
+
+wget https://github.com/navilera/Navilos/archive/<챕터별 커밋 해쉬 코드>
+unzip <다운받은 .zip파일> -d ./chp.<챕터index>
+
+wget https://github.com/navilera/Navilos/archive/157d1dabd465e69c537d10b235512823ee277a88.zip
+
+kill -9 `ps aux | grep 'qemu' | awk 'NR==1{print $2}'`
+
+
+chp4 : 0x00000000 에 위치하는 Exception Vector table을 작성하고, 각 익셉션에 따른 ARM 프로세서 모드에서 프로세서가 사용하는 PSR들을 초기화
+chp5 : UART 를 통해 리눅스 터미널과 Target 사이에서 문자 입출력
+chp6 : 인터럽트. 인터럽트 핸들러를 구현. IRQ가 발생했을 떄 핸들러가 호출되고 -> 어디서 발생한 인터럽트인지 확인하여 적절한 함수를 수행
+chp7 : Timer. HAL에 Timer를 추가하고, 간단한 delay()함수 구현
+chp8 : Task. task control block(tcb) 구조체를 정의, USR_TASK_STACK 을 고정 TASK 할당식으로 나눠두고, task register 하는 함수 구현.
+chp9 : Schedular. 간단하게 라운드-로빈 알고리즘을 사용하는 스케줄러 구현.
+chp10 : Context switching. 앞서 만든 Schedular를 활용해 context swithcing을 수행하는 커널 구현.
+chp11 : Event. event 커널을 추가해서 task가 SW적인 interrupt를 할 수 있도록 만듬
+chp12 : Message. 각 task 전용으로 Queue를 만들어주고, 이 Queue에 메세지를 넣어주는 식으로 구현
+chp13 : Synchronization. sync 커널을 추가해서 semaphore 방식의 동기화 구현. navilos는 싱글코어임으로 테스트를 위해 UART interrupt handler를 이상하게 수정해서 사용
+

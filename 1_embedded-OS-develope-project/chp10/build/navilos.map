@@ -1,0 +1,306 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_udivsi3.o)
+                              build/stdio.o (__aeabi_uidiv)
+/home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_dvmd_tls.o)
+                              /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/Entry.os
+LOAD build/Handler.o
+LOAD build/main.o
+LOAD build/Regs.o
+LOAD build/Interrupt.o
+LOAD build/Uart.o
+LOAD build/Timer.o
+LOAD build/stdlib.o
+LOAD build/stdio.o
+LOAD build/armcpu.o
+LOAD build/task.o
+LOAD build/Kernel.o
+LOAD /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a
+                0x0000000000000000                . = 0x0
+
+.text           0x0000000000000000     0x13dc
+ *(vector_start)
+ *(.text .rodata)
+ .text          0x0000000000000000       0xd4 build/Entry.os
+                0x0000000000000000                vector_start
+                0x000000000000003c                vector_end
+ .text          0x00000000000000d4       0x24 build/Handler.o
+                0x00000000000000d4                Irq_Handler
+                0x00000000000000f0                Fiq_Handler
+ .text          0x00000000000000f8      0x224 build/main.o
+                0x00000000000000f8                main
+                0x0000000000000250                User_task0
+                0x0000000000000294                User_task1
+                0x00000000000002d8                User_task2
+ .rodata        0x000000000000031c       0xa2 build/main.o
+ .text          0x00000000000003be        0x0 build/Regs.o
+ *fill*         0x00000000000003be        0x2 
+ .text          0x00000000000003c0      0x2f8 build/Interrupt.o
+                0x00000000000003c0                Hal_interrupt_init
+                0x000000000000045c                Hal_interrupt_enable
+                0x0000000000000528                Hal_interrupt_disable
+                0x00000000000005fc                Hal_interrupt_register_handler
+                0x0000000000000634                Hal_interrupt_run_handler
+ .text          0x00000000000006b8      0x1b4 build/Uart.o
+                0x00000000000006b8                Hal_uart_init
+                0x0000000000000758                Hal_uart_put_char
+                0x00000000000007b4                Hal_uart_get_char
+                0x000000000000083c                interrupt_handler
+ .text          0x000000000000086c      0x210 build/Timer.o
+                0x000000000000086c                Hal_timer_init
+                0x0000000000000a58                Hal_timer_get_1ms_counter
+ .text          0x0000000000000a7c       0x4c build/stdlib.o
+                0x0000000000000a7c                delay
+ .text          0x0000000000000ac8      0x440 build/stdio.o
+                0x0000000000000ac8                putstr
+                0x0000000000000b28                debug_printf
+                0x0000000000000b78                vsprintf
+                0x0000000000000df8                utoa
+ .rodata        0x0000000000000f08        0x7 build/stdio.o
+ *fill*         0x0000000000000f0f        0x1 
+ .text          0x0000000000000f10       0xb0 build/armcpu.o
+                0x0000000000000f10                enable_irq
+                0x0000000000000f3c                enable_fiq
+                0x0000000000000f68                disable_irq
+                0x0000000000000f94                disable_fiq
+ .text          0x0000000000000fc0      0x2dc build/task.o
+                0x0000000000000fc0                Kernel_task_init
+                0x00000000000010bc                Kernel_task_create
+                0x00000000000011d0                Kernel_task_schedular
+                0x0000000000001220                Kernel_task_context_switching
+                0x000000000000126c                Kernel_task_start
+ .text          0x000000000000129c       0x28 build/Kernel.o
+                0x000000000000129c                Kernel_yield
+                0x00000000000012b0                Kernel_start
+ .text          0x00000000000012c4      0x114 /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_udivsi3.o)
+                0x00000000000012c4                __udivsi3
+                0x00000000000012c4                __aeabi_uidiv
+                0x00000000000013b8                __aeabi_uidivmod
+ .text          0x00000000000013d8        0x4 /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_dvmd_tls.o)
+                0x00000000000013d8                __aeabi_ldiv0
+                0x00000000000013d8                __aeabi_idiv0
+
+.glue_7         0x00000000000013dc        0x0
+ .glue_7        0x00000000000013dc        0x0 linker stubs
+
+.glue_7t        0x00000000000013dc        0x0
+ .glue_7t       0x00000000000013dc        0x0 linker stubs
+
+.vfp11_veneer   0x00000000000013dc        0x0
+ .vfp11_veneer  0x00000000000013dc        0x0 linker stubs
+
+.v4_bx          0x00000000000013dc        0x0
+ .v4_bx         0x00000000000013dc        0x0 linker stubs
+
+.iplt           0x00000000000013dc        0x0
+ .iplt          0x00000000000013dc        0x0 build/Entry.os
+
+.data           0x00000000000013dc       0x10
+ *(.data)
+ .data          0x00000000000013dc        0x0 build/Entry.os
+ .data          0x00000000000013dc        0x0 build/Handler.o
+ .data          0x00000000000013dc        0x0 build/main.o
+ .data          0x00000000000013dc       0x10 build/Regs.o
+                0x00000000000013dc                Uart
+                0x00000000000013e0                GicCpu
+                0x00000000000013e4                GicDist
+                0x00000000000013e8                Timer
+ .data          0x00000000000013ec        0x0 build/Interrupt.o
+ .data          0x00000000000013ec        0x0 build/Uart.o
+ .data          0x00000000000013ec        0x0 build/Timer.o
+ .data          0x00000000000013ec        0x0 build/stdlib.o
+ .data          0x00000000000013ec        0x0 build/stdio.o
+ .data          0x00000000000013ec        0x0 build/armcpu.o
+ .data          0x00000000000013ec        0x0 build/task.o
+ .data          0x00000000000013ec        0x0 build/Kernel.o
+ .data          0x00000000000013ec        0x0 /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_udivsi3.o)
+ .data          0x00000000000013ec        0x0 /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_dvmd_tls.o)
+
+.igot.plt       0x00000000000013ec        0x0
+ .igot.plt      0x00000000000013ec        0x0 build/Entry.os
+
+.bss            0x00000000000013ec      0xa10
+ *(.bss)
+ .bss           0x00000000000013ec        0x0 build/Entry.os
+ .bss           0x00000000000013ec        0x0 build/Handler.o
+ .bss           0x00000000000013ec        0x0 build/main.o
+ .bss           0x00000000000013ec        0x0 build/Regs.o
+ .bss           0x00000000000013ec      0x3fc build/Interrupt.o
+ .bss           0x00000000000017e8        0x0 build/Uart.o
+ .bss           0x00000000000017e8        0x4 build/Timer.o
+ .bss           0x00000000000017ec        0x0 build/stdlib.o
+ .bss           0x00000000000017ec      0x400 build/stdio.o
+ .bss           0x0000000000001bec        0x0 build/armcpu.o
+ .bss           0x0000000000001bec      0x210 build/task.o
+ .bss           0x0000000000001dfc        0x0 build/Kernel.o
+ .bss           0x0000000000001dfc        0x0 /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_udivsi3.o)
+ .bss           0x0000000000001dfc        0x0 /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_dvmd_tls.o)
+
+.note.gnu.build-id
+                0x0000000000001dfc       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000000001dfc       0x24 linker stubs
+OUTPUT(build/navilos.axf elf32-littlearm)
+
+.rel.dyn        0x0000000000001e20        0x0
+ .rel.iplt      0x0000000000001e20        0x0 build/Entry.os
+
+.ARM.attributes
+                0x0000000000000000       0x2b
+ .ARM.attributes
+                0x0000000000000000       0x1d build/Entry.os
+ .ARM.attributes
+                0x000000000000001d       0x2f build/Handler.o
+ .ARM.attributes
+                0x000000000000004c       0x2f build/main.o
+ .ARM.attributes
+                0x000000000000007b       0x2f build/Regs.o
+ .ARM.attributes
+                0x00000000000000aa       0x2f build/Interrupt.o
+ .ARM.attributes
+                0x00000000000000d9       0x2f build/Uart.o
+ .ARM.attributes
+                0x0000000000000108       0x2f build/Timer.o
+ .ARM.attributes
+                0x0000000000000137       0x2f build/stdlib.o
+ .ARM.attributes
+                0x0000000000000166       0x2f build/stdio.o
+ .ARM.attributes
+                0x0000000000000195       0x2f build/armcpu.o
+ .ARM.attributes
+                0x00000000000001c4       0x2f build/task.o
+ .ARM.attributes
+                0x00000000000001f3       0x2f build/Kernel.o
+ .ARM.attributes
+                0x0000000000000222       0x1c /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000000000000023e       0x1c /home/jo/0_petalinux_2020.2/tools/xsct/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/9.2.0/libgcc.a(_dvmd_tls.o)
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x11 build/Handler.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 build/main.o
+ .comment       0x0000000000000011       0x12 build/Regs.o
+ .comment       0x0000000000000011       0x12 build/Interrupt.o
+ .comment       0x0000000000000011       0x12 build/Uart.o
+ .comment       0x0000000000000011       0x12 build/Timer.o
+ .comment       0x0000000000000011       0x12 build/stdlib.o
+ .comment       0x0000000000000011       0x12 build/stdio.o
+ .comment       0x0000000000000011       0x12 build/armcpu.o
+ .comment       0x0000000000000011       0x12 build/task.o
+ .comment       0x0000000000000011       0x12 build/Kernel.o
+
+.debug_line     0x0000000000000000     0x1087
+ .debug_line    0x0000000000000000       0x6d build/Entry.os
+ .debug_line    0x000000000000006d       0x4c build/Handler.o
+ .debug_line    0x00000000000000b9      0x216 build/main.o
+ .debug_line    0x00000000000002cf      0x15d build/Regs.o
+ .debug_line    0x000000000000042c      0x213 build/Interrupt.o
+ .debug_line    0x000000000000063f      0x1dc build/Uart.o
+ .debug_line    0x000000000000081b      0x1d1 build/Timer.o
+ .debug_line    0x00000000000009ec      0x155 build/stdlib.o
+ .debug_line    0x0000000000000b41      0x26c build/stdio.o
+ .debug_line    0x0000000000000dad       0x67 build/armcpu.o
+ .debug_line    0x0000000000000e14      0x227 build/task.o
+ .debug_line    0x000000000000103b       0x4c build/Kernel.o
+
+.debug_info     0x0000000000000000     0x3145
+ .debug_info    0x0000000000000000       0x26 build/Entry.os
+ .debug_info    0x0000000000000026       0x90 build/Handler.o
+ .debug_info    0x00000000000000b6      0x17d build/main.o
+ .debug_info    0x0000000000000233     0x1267 build/Regs.o
+ .debug_info    0x000000000000149a      0x6ab build/Interrupt.o
+ .debug_info    0x0000000000001b45      0xbf2 build/Uart.o
+ .debug_info    0x0000000000002737      0x2e0 build/Timer.o
+ .debug_info    0x0000000000002a17       0xb4 build/stdlib.o
+ .debug_info    0x0000000000002acb      0x2d3 build/stdio.o
+ .debug_info    0x0000000000002d9e       0x6e build/armcpu.o
+ .debug_info    0x0000000000002e0c      0x2a9 build/task.o
+ .debug_info    0x00000000000030b5       0x90 build/Kernel.o
+
+.debug_abbrev   0x0000000000000000      0xa45
+ .debug_abbrev  0x0000000000000000       0x14 build/Entry.os
+ .debug_abbrev  0x0000000000000014       0x5e build/Handler.o
+ .debug_abbrev  0x0000000000000072       0xcc build/main.o
+ .debug_abbrev  0x000000000000013e      0x11a build/Regs.o
+ .debug_abbrev  0x0000000000000258      0x19c build/Interrupt.o
+ .debug_abbrev  0x00000000000003f4      0x19f build/Uart.o
+ .debug_abbrev  0x0000000000000593      0x132 build/Timer.o
+ .debug_abbrev  0x00000000000006c5       0x75 build/stdlib.o
+ .debug_abbrev  0x000000000000073a      0x131 build/stdio.o
+ .debug_abbrev  0x000000000000086b       0x2e build/armcpu.o
+ .debug_abbrev  0x0000000000000899      0x168 build/task.o
+ .debug_abbrev  0x0000000000000a01       0x44 build/Kernel.o
+
+.debug_aranges  0x0000000000000000      0x178
+ .debug_aranges
+                0x0000000000000000       0x20 build/Entry.os
+ .debug_aranges
+                0x0000000000000020       0x20 build/Handler.o
+ .debug_aranges
+                0x0000000000000040       0x20 build/main.o
+ .debug_aranges
+                0x0000000000000060       0x18 build/Regs.o
+ .debug_aranges
+                0x0000000000000078       0x20 build/Interrupt.o
+ .debug_aranges
+                0x0000000000000098       0x20 build/Uart.o
+ .debug_aranges
+                0x00000000000000b8       0x20 build/Timer.o
+ .debug_aranges
+                0x00000000000000d8       0x20 build/stdlib.o
+ .debug_aranges
+                0x00000000000000f8       0x20 build/stdio.o
+ .debug_aranges
+                0x0000000000000118       0x20 build/armcpu.o
+ .debug_aranges
+                0x0000000000000138       0x20 build/task.o
+ .debug_aranges
+                0x0000000000000158       0x20 build/Kernel.o
+
+.debug_str      0x0000000000000000      0xb22
+ .debug_str     0x0000000000000000       0x51 build/Entry.os
+ .debug_str     0x0000000000000051       0xd9 build/Handler.o
+                                        0x143 (size before relaxing)
+ .debug_str     0x000000000000012a       0x58 build/main.o
+                                        0x17d (size before relaxing)
+ .debug_str     0x0000000000000182      0x5b6 build/Regs.o
+                                        0x6ed (size before relaxing)
+ .debug_str     0x0000000000000738       0xc5 build/Interrupt.o
+                                        0x3fc (size before relaxing)
+ .debug_str     0x00000000000007fd       0x6d build/Uart.o
+                                        0x497 (size before relaxing)
+ .debug_str     0x000000000000086a       0x66 build/Timer.o
+                                        0x29e (size before relaxing)
+ .debug_str     0x00000000000008d0       0x18 build/stdlib.o
+                                        0x148 (size before relaxing)
+ .debug_str     0x00000000000008e8       0x7c build/stdio.o
+                                        0x1c6 (size before relaxing)
+ .debug_str     0x0000000000000964       0x3b build/armcpu.o
+                                         0xd3 (size before relaxing)
+ .debug_str     0x000000000000099f      0x159 build/task.o
+                                        0x29b (size before relaxing)
+ .debug_str     0x0000000000000af8       0x2a build/Kernel.o
+                                        0x146 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x540
+ .debug_frame   0x0000000000000000       0x50 build/Handler.o
+ .debug_frame   0x0000000000000050       0xbc build/main.o
+ .debug_frame   0x000000000000010c       0xb0 build/Interrupt.o
+ .debug_frame   0x00000000000001bc       0x8c build/Uart.o
+ .debug_frame   0x0000000000000248       0x70 build/Timer.o
+ .debug_frame   0x00000000000002b8       0x30 build/stdlib.o
+ .debug_frame   0x00000000000002e8       0xac build/stdio.o
+ .debug_frame   0x0000000000000394       0x90 build/armcpu.o
+ .debug_frame   0x0000000000000424       0xd4 build/task.o
+ .debug_frame   0x00000000000004f8       0x48 build/Kernel.o
