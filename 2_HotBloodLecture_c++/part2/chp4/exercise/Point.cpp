@@ -1,11 +1,7 @@
 #include "Point.h"
 
 
-void Point::Init(int x, int y)
-{
-    xpos = x;
-    ypos = y;
-}
+Point::Point(int x, int y) : xpos(x), ypos(y) { }
 
 void Point::ShowPointInfo(void) const
 {
@@ -13,11 +9,7 @@ void Point::ShowPointInfo(void) const
 }
 
 
-void Circle::Init(int x, int y, int r)
-{
-    center.Init(x, y);
-    radius = r;
-}
+Circle::Circle(int x, int y, int r) : center(x, y), radius(r) { }
 
 void Circle::ShowCircleInfo(void) const
 {
@@ -26,11 +18,7 @@ void Circle::ShowCircleInfo(void) const
 }
 
 
-void Ring::Init(int x1, int y1, int r1, int x2, int y2, int r2)
-{
-    inner.Init(x1, y1, r1);
-    outter.Init(x2, y2, r2);
-}
+Ring::Ring(int x1, int y1, int r1, int x2, int y2, int r2) : inner(x1, y1, r1), outter(x2, y2, r2) { }
 
 void Ring::ShowRingInfo(void) const
 {

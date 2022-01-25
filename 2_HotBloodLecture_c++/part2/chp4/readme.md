@@ -38,7 +38,7 @@
    - Constructor
 
         ``` c++
-            clase subClass
+            class subClass
             {
             private:
                 int num;
@@ -109,3 +109,54 @@
      - 용도
        - member를 포인터로 정의하고, 실제 member 의 선언은 constructor에서 new 키워드를 이용한 동적할당으로 생성
        - Destructor에서는 Constructor에서 동작할당한 member를 delete
+
+## 4-4 Class 배열 & This pointer
+  - 클래스 배열 선언 2가지 방식
+    - 직접 배열로 선언
+      - `myClass test[10];`
+      - input이 void인 constructor가 무조건 실행되기 때문에, 미리 정의해두어야 함 
+      - 다른 형태의 constructor 사용 불가
+      - 별도의 initiation function 을 만들어 사용
+    - 포인터로 선언
+      - `myClass *temp[10]; ... for  {temp[i] = new myClass(input);}`
+      - 반복문을 이용해 동적할당
+  - This pointer
+    - 클래스 안에서 object 자신의 주소값을 지님
+    - 용도 1 : 매개변수와 멤버변수의 이름을 동일하게 사용 할수있게
+      ``` c++
+        myClass
+        {
+        private:
+            int num;
+        public:
+            myClass(int num)
+            {
+                this->num = num;
+            }
+        }
+      ```
+    - 용도 2 : Self Reference
+      ``` c++
+        myClass
+        {
+        private:
+            int num;
+        public:
+            myClass(int num) : num(num) {}
+            myClass& add(int num)
+            {
+                this->num += num;
+                return *this;
+            }
+            myClass& sub(int num)
+            {
+                this->num -= num;
+                return *this;
+            }
+        }
+        
+        ...
+        
+        myClass sum(3); //sum=3
+        sum.add(3).sub(1).add(5).sub(1); // sum=3+3-1+5-1
+      ``` 
