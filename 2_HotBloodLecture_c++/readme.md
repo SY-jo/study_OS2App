@@ -11,3 +11,9 @@
   - Chp 3
     - class 선언 및 정의 방법
   - Chp 4
+    - Infomation Hiding
+    - Encapsulation
+    - Constructor & Destructor
+    - Member initializer
+    - Class array
+    - 'this' pointer
