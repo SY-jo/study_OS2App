@@ -17,3 +17,10 @@
     - Member initializer
     - Class array
     - 'this' pointer
+  - Chp 5
+    - Copy constructor
+  - Chp 6
+    - const
+    - friend
+    - static
+    - mutable
