@@ -6,7 +6,7 @@ int main(void)
 {
     Menu menu;
     
-    freopen("TestInput.txt", "r", stdin);
+    freopen("TestInput.txt", "r", stdin); // 테스트입력 자동으로
 
     while(1)
     {
