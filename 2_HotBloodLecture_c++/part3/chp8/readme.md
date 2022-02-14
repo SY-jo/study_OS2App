@@ -17,6 +17,14 @@
 * "C++ 컴파일러는 포인터를 이용한 연산의 가능성 여부를 판단할 때, 포인터의 자료형을 기준으로 판단하지, 실제 가리키는 객체의 자료형을 기준으로 판단하지 않는다."
 * Function Overriding 의 기능이 의도하는바를 제대로 쓰기 위해서는 method를 정의할 때 `virtual mMethod() { }` 와 같이 해야함
 * 오버라이딩되는 함수가 virtual function으로 정의되면, ParentClass의 포인터를 통해 `ptrParrent->mMethod()` 와 같이 호출했을 때, ChildClass의 mMethod를 call하는게 가능해짐
+* 이는 동작하는 함수의 명령어코드가 저장된 주소가 static binding 되던것을 dynamic binding 이 되도록 해주기 때문이라고함.. 상세한 원리는 나중에 다시
+* 위와 같은 **포인터** 의 특성은 **참조자**에 대해서도 동일하게 적용됨. ParentClass의 참조자는 ChildClass에도 사용가능/ChildClass에서 새롭게 만들어진 method는 사용불가/ChildClass에서 virtual method overriding이 된 경우에는 해당 ChildClass에서 정의된 함수가 실행됨
+* 이러한 특성은 class를 함수의 argument/return으로 사용될 떄 활용가능
+
+## Virtual Destructor
+* `virtual ~myClass() {...}`
+* 상속을 통해 정의된 클래스에 대해 ParentClass의 포인터를 사용하여 동적할당(new)한 경우, delete 했을 때 ParentClass의 Destructor만 실행되는 문제가 있음
+* Destructor에 대해서도 virtual 키워드를 붙여주면 문제가 해결됨
 
 ## Abstract Class(추상 클래스)
 * Pure Virtual Function 을 method로 가지는 class
