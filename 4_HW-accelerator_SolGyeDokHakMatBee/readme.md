@@ -1,8 +1,18 @@
-저작권에 문제가 되지 않는 선에서 요약정리
+*저작권에 문제가 되지 않는 선에서 요약정리
+*실습코드가 담겨있는 디렉토리는 로컬에서만 저장되고 원격으로 push 안 되도록 설정
+*세세한 내용은 원노트에 따로 정리
 
 # 강의
 ## lab 1
 * 환경세팅 및 DIP 스위치, 택트 스위치, LED 를 control하는 예제 코드를 실행해봄
+
+## lab 2
+* FPGA vs. ASIC
+  * Reprogrammable
+  * Multiple Bitstreams
+  * Cost of Bug Fix
+    * HW의 버그픽스가 비교적 쉬움
+
 
 # 따로 찾아본거
 ## Vivado 관련
