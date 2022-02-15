@@ -17,6 +17,9 @@
 * lab 5
 	* Custom IP 사용법
   * Reports Utilization 을 통해 Implementation 된 디자인이 FPGA 리소스를 얼마나 썼는지 확인
+* lab 6~8
+  * Xilinx 에서 제공하는 AXI IP template 사용법
+  * ILA IP 를 사용하여 Runtime에서 FPGA 내부 signal을 관찰하는 법
 
 
 
