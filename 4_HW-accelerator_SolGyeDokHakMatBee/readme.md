@@ -1,5 +1,7 @@
 *저작권에 문제가 되지 않는 선에서 요약정리한 intro만 보관
+
 *실습코드가 담겨있는 디렉토리는 로컬에서만 저장되고 원격으로 push 안 되도록 설정
+
 *세세한 내용은 원노트에 따로 정리
 
 # 강의요약
@@ -20,6 +22,10 @@
 * lab 6~8
   * Xilinx 에서 제공하는 AXI IP template 사용법
   * ILA IP 를 사용하여 Runtime에서 FPGA 내부 signal을 관찰하는 법
+* lab 9~10
+  * lab 4~8 까지의 내용을 종합하여, PC---(UART)---PS---(AXI4-Lite)---PL에 위치하는 controller(Blinking LED, FSM) 를 제어하는 실습
+* lab 11~13
+  * BRAM I/F controller 가 포함된 IP를 가지고, 메모리에 Read/Write 해보기
 
 
 

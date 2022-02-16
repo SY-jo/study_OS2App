@@ -24,3 +24,13 @@
     - friend
     - static
     - mutable
+- Part 3 : 상속
+  - Chp 7
+    - basic Inheritance syntax
+  - Chp 8
+    - Polymorphism by Function Overriding
+    - virtual keyword
+  - Chp 9
+    - more detail in virtual
+    - 다중상속 소개
+  - Part 4 : ?
