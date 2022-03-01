@@ -33,7 +33,7 @@
   - Chp 9
     - more detail in virtual
     - 다중상속 소개
-  - Part 4
+  - Part 4 : 연산자 오버로딩, 템플릿, 예외처리
     - Chp 10
       - Operator Overloading
     - Chp 11
@@ -46,3 +46,7 @@
     - Chp 14
       - template 매개변수
       - static variable in class template
+    - Chp 15
+      - exception handling : try, throw, catch
+    - Chp 16
+      - 
