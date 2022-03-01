@@ -14,6 +14,8 @@
     ```
 * 연산자이기는 한데, template function 으로 구현되어 있는듯
 * 오른쪽 놈일수록 형 변환이 가능한 범위가 늘어남
+* dynamic_cast 는 runtime 중에도 exception 을 내는 등 안정성이 뛰어남. 그만큼 느리기도함.
 * 기본적으로는 dynamic_cast 사용하되, 실행속도를 높이기 위해 제한된 범위 안에서 static_cast 사용
 * const_cast 는 argument의 const 속성을 없애면서 형 변환, reinterpret_cast 는 C의 형 변환가 동일
+* Parent Class 와 Child Class 의 각 pointer 사이에서 일어나는 typecast 관련
 
