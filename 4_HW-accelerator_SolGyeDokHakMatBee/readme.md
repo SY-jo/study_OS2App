@@ -26,6 +26,11 @@
   * lab 4~8 까지의 내용을 종합하여, PC---(UART)---PS---(AXI4-Lite)---PL에 위치하는 controller(Blinking LED, FSM) 를 제어하는 실습
 * lab 11~13
   * BRAM I/F controller 가 포함된 IP를 가지고, 메모리에 Read/Write 해보기
+* lab 14~16
+  * PS로부터 BRAM0 에 데이터를 입력 받고, BRAM1 에 옮기고, BRAM1에서 PS로 데이터 출력
+* lab 17~20
+	* 이전 lab의 Data Mover에 Multiplier module 을 추가하여 곱셈연산을 수행하도록
+  * 1byte x 1byte 연산을 동시에 2번 수행할 수 있는 병렬연산기(H/W 가속기)를 간단히 만들어 실습
 
 
 
