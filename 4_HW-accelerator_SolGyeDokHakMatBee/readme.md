@@ -31,6 +31,9 @@
 * lab 17~20
 	* 이전 lab의 Data Mover에 Multiplier module 을 추가하여 곱셈연산을 수행하도록
   * 1byte x 1byte 연산을 동시에 2번 수행할 수 있는 병렬연산기(H/W 가속기)를 간단히 만들어 실습
+* lab 21~22
+  * Fully connected layer 의 inference 구현
+  * 이전 lab의 모델에서 BRAM0, BRAM1 을 Input node, weight node로 사용하고, 만들어둔 multiplier 모델을 이용해 곱셈 및 덧셈 연산을 해서 AXI4-lite control의 register에 최종 결과를 저장
 
 
 
@@ -43,4 +46,6 @@
 * 왜 module 코드와 test bench 코드가 따로 필요한가?
   * test bench 는 만들어진 H/W module 을 기능을 테스트 하기 위한 simulation 을 정의한 것
   * 원하는 clock, input signal 등을 설정
-* 
+  
+# History
+  * ~22/03/15 : Vivado + Vitis 를 같이 사용해서 PL단에 만들어진 모듈을 사용하는 방법을 익히는데 중점을 두고 학습. Verilog를 써서 직접 모델을 만들어보는건 여름에 Verilog 강의를 듣고나서 진행 
