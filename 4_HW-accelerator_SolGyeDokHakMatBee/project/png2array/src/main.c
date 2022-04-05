@@ -8,7 +8,6 @@ int main(int argc, const char** argv)
 	char* fileName[30];
 	printf("png file name : ");
 	scanf("%s", &fileName);
-	//char* fileName = "test.png";
 	
 
 	//handle for .png image file
