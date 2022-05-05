@@ -8,6 +8,7 @@
   * chp 4 : window 생성
   * chp 5 : VBO, VAO, VEO, shader -> Hello Triangle
   * chp 6 : GLSL. Shader class를 만들어서 코드 간소화
+  * chp 7 : Texture 에 대한 기초
 
 # Trouble Shooting
   * MinGW 사용시 링크 에러

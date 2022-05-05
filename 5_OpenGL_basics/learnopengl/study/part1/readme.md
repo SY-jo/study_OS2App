@@ -41,7 +41,7 @@
 
   ## Chp 5
   * Shdaer 에 대해
-        <center> <img src=".\img\1.png"> </center>
+        <center> <img src="..\img\1.png"> </center>
     * openGL에서 다뤄지는 data는 3차원 정보를 담고있는 Vertex Data
     * Vertex Data가 Graphics pipeline에 들어가면, 최종적으로 모니터 상의 2D pixel 로 출력됨
     * Graphics pipeline을 구성하는 개별적인 작은 연산 블록들을 "Shader"라고함
@@ -50,7 +50,7 @@
     * Shader는 "openGL Shading Language"(GLSL)이라는 언어로 프로그래밍 됨
     * 각 Shader 의 역할에 대한 설명은 나중에 openGL 좀 써보고나서야 제대로 이해할 수 있을듯
   * Normalized Device Coordinates(NDC)
-        <center> <img src=".\img\2.png"> </center>
+        <center> <img src="..\img\2.png"> </center>
     * Shader에서 사용하는 좌표계
     * 원점은 정중앙. -1 ~ 1 사이의 실수값을 가짐.
     * 기본적으로 window에서의 좌표는 좌상단을 원점으로 하여, pixel 단위로 크기를 가짐.
@@ -98,7 +98,7 @@
     ...
     ```
   * VBO
-        <center> <img src=".\img\3.png"> </center>
+        <center> <img src="..\img\3.png"> </center>
     * Vertex Buffer Object
     * vertex data를 담고있는 buffer. GPU의 VRAM에 위치
     ``` cpp
@@ -127,7 +127,7 @@
     ```
 
   * VAO
-        <center> <img src=".\img\4.png"> </center>
+        <center> <img src="..\img\4.png"> </center>
     ``` cpp
       GLuint VAO;
       glGenVertexArrays(1, &VAO);
@@ -190,3 +190,28 @@
         GLint uniform_loc = glGetUniformLocation(shaderProgram, "uniform_name");
         glUniform4f(uniform_loc, 0.0f, greenValue, 0.0f, 1.0f);
       ```
+
+  ## Chp 7 : Texture
+  * Texture
+    * texture란
+    * texture coordinate
+    * sampling
+  * Config
+    * Wrapping
+    * Minifying/Magnifying Filtering
+  * Texture Object
+    * 생성
+    * Fragment Shader에게 전달하는 법
+    * Texture unit
+
+  ## Chp 8 : Transformations
+  * vector, matrix basic
+  * Transform Matrix
+    * translation
+    * scail
+    * rotations
+  * glm library
+    * header only library
+    * matrix class 나 다른 수학연산을 GLSL 포맷에서 사용하기 좋게 제공
+  
+  
